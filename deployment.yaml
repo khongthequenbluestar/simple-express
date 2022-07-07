@@ -15,8 +15,8 @@ spec:
         app: ducta11-kubernetes-simple-express
     spec:
       containers:
-      - name: simple-express
-        image: khongthequenbluestar/simple-express
+      - name: udacity-simple-express
+        image: khongthequenbluestar/udacity-simple-express
         ports:
         - containerPort: 8080
         livenessProbe:

@@ -15,10 +15,10 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-express .
-  - docker tag simple-express khongthequenbluestar/simple-express:latest
+  - docker build -t udacity-simple-express .
+  - docker tag udacity-simple-express "$DOCKER_USERNAME"/udacity-simple-express:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push khongthequenbluestar/simple-express
+  - docker push "$DOCKER_USERNAME"/udacity-simple-express
 
